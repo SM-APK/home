@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - SM</title>
+    <link rel="stylesheet" href="css/style-727832.css">
+    <script src="js/script-2828.js" defer></script>
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+    </div>
+    
+    <div class="register-container">
+        <h1 class="sm-logo">SM</h1>
+        
+        <!-- Phone Number or Email Input (Initial Step) -->
+        <div class="input-container" id="phoneEmailSection">
+            <input type="text" id="regPhoneEmail" required>
+            <label>Phone Number or Email</label>
+        </div>
+        <button class="next-btn" onclick="sendOTP()">Next</button>
+        
+        <!-- OTP Section -->
+        <div id="otpSection" style="display: none;">
+            <div class="input-container">
+                <input type="text" id="otpCode" required>
+                <label>Enter OTP</label>
+            </div>
+            <button class="next-btn" onclick="verifyOTP()">Verify OTP</button>
+        </div>
+
+        <!-- Username Section -->
+        <div id="usernameSection" style="display: none;">
+            <div class="input-container">
+                <input type="text" id="regUsername" required>
+                <label>Choose a Username</label>
+            </div>
+            <button class="next-btn" onclick="checkUsername()">Next</button>
+        </div>
+
+        <!-- Password Section -->
+        <div id="passwordSection" style="display: none;">
+            <div class="input-container">
+                <input type="password" id="regPassword" required>
+                <label>Create Password</label>
+            </div>
+            <button class="next-btn" onclick="completeRegistration()">Register</button>
+        </div>
+    </div>
+</body>
+</html>

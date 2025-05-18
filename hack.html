@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> in Progress...</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #0f0;
+      font-family: monospace;
+      padding: 20px;
+      overflow: hidden;
+    }
+    #console {
+      height: 90vh;
+      overflow-y: scroll;
+      border: 2px solid #0f0;
+      padding: 10px;
+      background-color: #111;
+    }
+    .line {
+      margin: 2px 0;
+    }
+    #progress {
+      margin-top: 10px;
+      height: 20px;
+      background-color: #333;
+      border: 1px solid #0f0;
+      overflow: hidden;
+    }
+    #bar {
+      height: 100%;
+      width: 0%;
+      background-color: #0f0;
+      animation: progress 10s linear forwards;
+    }
+    @keyframes progress {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <h2> In Progress...</h2>
+  <div id="progress"><div id="bar"></div></div>
+  <div id="console"></div>
+
+  <script>
+    const consoleBox = document.getElementById("console");
+    const fakeLogs = [
+      "Accessing mobile system...",
+      "Bypassing lock screen...",
+      "Extracting mobile number...",
+      "Sending mobile password to server...",
+      "Accessing camera...",
+      "Recording current location...",
+      "Sending IP address to hacker...",
+      "Stealing browser history...",
+      "Disabling mobile settings...",
+      "Uploading contacts to dark web...",
+      "Accessing SMS messages...",
+      "WhatsApp data leaking...",
+      "Turning on microphone...",
+      "Installing spyware...",
+      "Tracking GPS location...",
+      "Uploading gallery photos...",
+      "Hacking complete: 10%",
+      "Decrypting messages...",
+      "Injecting malicious code...",
+      "Spreading virus to contacts...",
+      "Capturing keystrokes...",
+      "Mobile infected successfully...",
+      "Locking phone remotely...",
+      "Changing Google password...",
+      "Hacking complete: 25%",
+      "Getting SIM card info...",
+      "Disabling antivirus...",
+      "Generating remote access...",
+      "Creating backdoor...",
+      "System reboot initiated...",
+      "Hacking complete: 50%",
+      "Accessing payment apps...",
+      "Retrieving OTP messages...",
+      "Cloning device identity...",
+      "Tracking all taps...",
+      "Hacking complete: 75%",
+      "Stealing bank credentials...",
+      "Using mobile for crypto mining...",
+      "Sending fake SMS to contacts...",
+      "Replacing settings app...",
+      "Disabling WiFi and mobile data...",
+      "Restart blocked...",
+      "System override active...",
+      "Hacking complete: 100%",
+      "Mobile fully compromised.",
+      "Deleting recovery partition...",
+      "Goodbye privacy!",
+      "Permanent control activated!",
+      "You can't stop this.",
+      "MOBILE HACKED!",
+      "Injecting Trojan payload...",
+"Modifying system files...",
+"Root access granted...",
+"Encrypting device storage...",
+"Erasing call logs...",
+"Extracting IMEI number...",
+"Uploading SIM toolkit data...",
+"Activating silent mode...",
+"Listening to background audio...",
+"Fetching Google account...",
+"Copying biometric data...",
+"Triggering self-destruct code...",
+"Connecting to dark web server...",
+"Remote shell initialized...",
+"Auto-update disabled...",
+"Permission manager overridden...",
+"Launching keylogger...",
+"Bypassing firewall...",
+"Overwriting app permissions...",
+"Voice recognition captured...",
+"Transmitting to anonymous host...",
+"Bluetooth exploit activated...",
+"Screen recording enabled...",
+"Battery draining exploit running...",
+"Message interception active...",
+"QR scanner hijacked...",
+"Calendar events modified...",
+"Notes app compromised...",
+"Mobile backup sending to attacker...",
+"Creating alternate user profile...",
+"Facebook token captured...",
+"Instagram credentials saved...",
+"Fingerprint spoofing started...",
+"Linking device to botnet...",
+"SIM switching script executed...",
+"Location spoof activated...",
+"Mobile locked permanently...",
+"Face ID bypass running...",
+"Emergency call blocked...",
+"USB debugging enabled remotely...",
+"RAM flooding in process...",
+"Auto-click malware injected...",
+"Webcam video captured...",
+"App cloning in progress...",
+"Internal storage mirrored...",
+"Stealth mode ON...",
+"Deleting security patches...",
+"Contacts being spammed...",
+"Installing clone OS...",
+"Voice command overwritten...",
+"Mobile overheating triggered...",
+"Auto-forwarding all calls...",
+"Mobile linked to scam network...",
+"Data recovery blocked...",
+"Camera LED disabled...",
+"Microphone auto-on enabled...",
+"Anti-virus uninstalling...",
+"Reboot loop initiated...",
+"Device timeout overwritten...",
+"Custom ROM installing...",
+"System UI corrupted...",
+"Emergency backup wiped...",
+"All permissions force-granted...",
+
+      
+    ];
+
+    while (fakeLogs.length < 200) {
+    let rand = Math.floor(Math.random() * 20);
+    fakeLogs.push(fakeLogs[rand]);
+  }
+
+  let index = 0;
+  const totalLines = fakeLogs.length;
+
+  function addLine() {
+    if (index >= totalLines) return;
+
+    const line = document.createElement("div");
+    line.className = "line";
+    line.textContent = fakeLogs[index];
+    consoleBox.appendChild(line);
+    consoleBox.scrollTop = consoleBox.scrollHeight;
+
+    // Update progress bar
+    let percent = ((index + 1) / totalLines) * 100;
+    bar.style.width = percent + "%";
+
+    index++;
+    setTimeout(addLine, 100); // speed of line printing
+  }
+
+  setTimeout(addLine, 1000);
+  if (index === totalLines) {
+  const endMsg = document.createElement("div");
+  endMsg.innerHTML = "<h2 style='color:red;text-align:center;'>💀 HACK COMPLETE 💀</h2>";
+  consoleBox.appendChild(endMsg);
+}
+
+  </script>
+  <br><br>
+</body>
+</html>

@@ -1,0 +1,192 @@
+
+  
+/* Theme Variables */
+:root {
+    --bg: #121212;
+    --text: #fff;
+    --input-bg: #1e1e1e;
+    --input-border: #ffffff;
+    --button-bg: #ffcc00;
+    --button-text: #000;
+}
+.sm-logo {  
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 10px rgba(255, 200, 0, 0.5);
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.light-mode {   
+    --bg: #f4f4f4;
+    --text: #222;
+    --input-bg: #fff;
+    --input-border: #aaa;
+    --button-bg: #222;
+    --button-text: #fff;
+}
+
+/* ✅ Popup Styling */
+.popup-8726-hidden {
+    display: none;
+  }
+  .popup-8726-visible {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .popup-content-8726 {
+    background: var(--popup-bg, #fff);
+    color: var(--popup-text, #000);
+    padding: 25px 35px;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 0 25px var(--loader, #0ff);
+    animation: popupAnim 0.4s ease-in-out;
+  }
+  @keyframes popupAnim {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+    
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--input-border);
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+    position: relative;
+    z-index: 1;  /* Ensure input is above label */
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: var(--input-border);
+    transition: 0.3s;
+    transform: translateY(-50%);
+    cursor: text;  /* Cursor text mode */
+    z-index: 2;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+    top: 0;
+    font-size: 12px;
+    color: var(--button-bg);
+}
+
+/* Login Container */
+.login-container {
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background: var(--input-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+
+}
+#centerWrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.sm-logo {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--button-bg);
+}
+
+/* Input Fields */
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--input-border);
+    color: var(--text);
+    font-size: 16px;
+    outline: none;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: var(--input-border);
+    transition: 0.3s;
+    transform: translateY(-50%);
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+    top: 0;
+    font-size: 12px;
+    color: var(--button-bg);
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: var(--button-text);
+    color: var(--button-bg);
+}
+
+
+/* Next Button */
+.next-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.next-btn:hover {
+    background: var(--button-text);
+    color: var(--button-bg);
+}

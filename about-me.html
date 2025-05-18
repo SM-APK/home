@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1024px">
+  <title>SM: About</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+    
+    .about-section-2001 {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp-3001 1s ease forwards;
+}
+
+.about-container-2002 {
+  background: var(--box-bg-1003);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px var(--shadow-1006);
+  max-width: 1000px;
+  animation: zoomIn-3002 0.8s ease forwards;
+  transform: scale(0.95);
+  border: 3px solid var(--border-color-1008);
+  backdrop-filter: blur(8px);
+}
+
+.owner-name-2003 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInLeft-3003 0.6s ease forwards;
+}
+.owner-name-2003 {
+  font-size: 42px;
+  font-weight: 900;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to right, #00d4ff, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #00d4ff;
+  width: 0;
+  animation: typing 3s steps(20) forwards, blink 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.website-info-2004 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  animation: fadeInUp-3001 1.2s ease forwards;
+  color: var(--color-45672);
+}
+
+.features-list-2005 {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.features-list-2005 li {
+  font-size: 18px;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  color: var(--color-45672);
+  animation: slideInRight-3004 0.5s ease forwards;
+}
+
+.features-list-2005 li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--highlight-1004);
+}
+
+.skills-box-2006 {
+  background-color: var(--accent-bg-1009);
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 30px;
+  animation: popIn-3005 0.6s ease forwards;
+}
+
+.skills-box-2006 h2 {
+  font-size: 24px;
+  color: var(--highlight-1004);
+  margin-bottom: 20px;
+}
+
+.skills-list-2007 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-list-2007 span {
+  background-color: var(--badge-bg-1007);
+  color: var(--highlight-text-1005);
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  animation: skillBounce-3006 0.6s ease forwards;
+  transform: scale(0.9);
+}
+.skills-list-2007 span {
+  background-color: #00d4ff;
+  color: #000;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  box-shadow: 0 0 8px #00d4ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills-list-2007 span:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+
+/* Animations */
+@keyframes fadeInUp-3001 {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes zoomIn-3002 {
+  0% {opacity: 0; transform: scale(0.7);}
+  100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes slideInLeft-3003 {
+  0% {opacity: 0; transform: translateX(-50px);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes slideInRight-3004 {
+  0% {opacity: 0; transform: translateX(50px);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+@keyframes popIn-3005 {
+  0% {opacity: 0; transform: scale(0.8);}
+  100% {opacity: 1; transform: scale(1);}
+}
+
+@keyframes skillBounce-3006 {
+  0% {opacity: 0; transform: scale(0.5);}
+  60% {transform: scale(1.2);}
+  100% {opacity: 1; transform: scale(1);}
+}
+.website-info-2004, .features-list-2005, .skills-box-2006 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 1s ease forwards;
+}
+.website-info-2004 { animation-delay: 3s; }
+.features-list-2005 { animation-delay: 4s; }
+.skills-box-2006 { animation-delay: 5s; }
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container-2002 {
+    padding: 30px;
+  }
+
+  .owner-name-2003 {
+    font-size: 28px;
+  }
+
+  .website-info-2004, .features-list-2005 li {
+    font-size: 16px;
+  }
+
+  .skills-box-2006 h2 {
+    font-size: 20px;
+  }
+
+  .skills-list-2007 span {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}
+
+</style>
+</head>
+<body>
+  <!-- Blur Overlay -->
+  <div id="blurOverlay"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-section">
+      <img src="images/SG LOGO PNG.png" alt="Logo" class="logo" />
+      <span class="site-name site-name-rgb">SM: SHASHIKANT M (Coming Soon)</span>
+<span class="coming"><sup>SM</sup></span>
+
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about-me.html">ABOUT ME</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="sm-auth.html">SM AUTH</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="side-menu" id="sideMenu">
+    <div class="side-menu-opt"><a href="">👤 Account Info</a></div>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+      <span id="themeText">Light</span>
+    </div>
+    <div class="side-menu-opt"><a href="contact.html">📞 Contact Us</a></div>
+  </div><div id="blurOverlay"></div>
+
+
+  
+  <br><br><br><br>
+
+
+
+    <section class="about-section-2001">
+    <div class="about-container-2002">
+      <h1 class="owner-name-2003">👑 Shashikant M ( Coming Soon ) <sup>SM</sup></h1>
+      <p class="website-info-2004">
+        I  create This Website <strong>SM</strong> — a powerful all-in-one platform  <br>
+        And more powerful updates coming soon!
+      </p>
+
+      <ul class="features-list-2005">
+        <h2 class="owner-name-2003">This Site Features</h2>
+        <li>📦 <strong>SM-Marketplace </strong> – Buy & Sell Anything</li>
+        <li>👥 <strong>SM-Social Media </strong> – Connect & Share</li>
+        <li>📱<strong> SM-APK </strong>– Trusted APK Downloads</li>
+      </ul>
+
+      <div class="skills-box-2006">
+        <h2>🔥 Shashikant Skills</h2>
+        <div class="skills-list-2007">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JAVA</span>
+          <span>JAVASCRIPT</span>
+          <span>PHP</span>
+          <span>PYTHON</span>
+          <span>ETHICAL HACKING</span>
+          <span>CYBER SECURITY</span>
+          <span>FRONTEND CODING</span>
+          <span>BACKEND CODING</span>
+          <span>MS OFFICE</span>
+          <span>C</span>
+          <span>C++</span>
+          <span>Etc....</span>
+        </div>
+      </div>
+      <br><br>
+      <h3>FOLLOW US</h3>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@ShashikantGamerzOfficial" target="_blank" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/shashikant70560" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© 2025 <strong>SM</strong>. All rights reserved.</p>
+      <p>Website created by <strong>SHASHIKANT</strong></p>
+      <div class="social-icons">
+        <a href="https://www.youtube.com/@ShashikantGamerzOfficial" target="_blank" aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.instagram.com/shashikant70560" target="_blank" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Script -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

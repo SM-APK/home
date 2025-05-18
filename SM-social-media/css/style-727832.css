@@ -1,0 +1,437 @@
+/* Global Styles */
+:root {
+    --bg-color-body: #ffffff;
+    --bg-color: #fefefe;
+    --text-color: #1a1a1a;
+    --header-bg: #ffffff;
+    --nav-hover: #3263ac;
+    --sidebar-bg: #f0f4ff;
+    --tab-hover: #e8f0ff;
+    --highlight: #000000;
+    --highlight-icon-menu: #000;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --border-color: #000000;
+    --bg-color-tab: #c2b9b9;
+    --bg-color-f: #292b2a;
+    --color-f: #ffffff;
+    --text-color: #333;
+    --icon-color: #e50914;
+    --link-hover: #555;
+    --bg: #121212;
+    --text: #ffffff;
+    --accent: #ffcc00;
+    --clr-67890-border: #d1d1d1;
+    --clr-67890-top: #0078ff;
+    --clr-67890-glow: rgba(0, 120, 255, 0.6);
+    --clr-67890-bg: #ffffff;
+    --input-border: #aaa;
+    --button-bg: #222;
+    --input-bg: #fff;
+    --button-text: #fff;
+    --highlight-slider: #ffffff;
+}
+
+body.dark {
+    --bg-color-body: #3b3737;
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --header-bg: #1e293b;
+    --nav-hover: #1d4783;
+    --sidebar-bg: #1f2937;
+    --tab-hover: #2c3e50;
+    --highlight: #00d4ff;
+    --highlight-icon-menu: #000;
+    --shadow: rgba(255, 255, 255, 0.1);
+    --border-color: #00d4ff;
+    --bg-color-tab: #5c5858;
+    --bg-color-f: #111;
+    --color-f: #ffffff;
+    --text-color: #eee;
+    --icon-color: #ff4444;
+    --link-hover: #ccc;
+    --bg: #f4f4f4;
+    --text: #ffffff;
+    --accent: #ffcc00;
+    --clr-67890-border: #2c2c2c;
+    --clr-67890-top: #00f7ff;
+    --clr-67890-glow: rgba(0, 247, 255, 0.5);
+    --clr-67890-bg: #121212;
+    --input-border: #555;
+    --button-bg: #ffcc00;
+    --input-bg: #1e1e1e;
+    --button-text: #000;
+    --highlight-slider: #69f546;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+   background-color: var(--bg-color-body);
+    color: var(--text-color);
+    transition: 0.3s ease-in-out;
+}
+
+
+.sm-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffcc00, #ff6600);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 10px rgb(255, 201, 5);
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--input-border);
+    color: var(--text-color);
+    font-size: 16px;
+    outline: none;
+    position: relative;
+    z-index: 1;  /* Ensure input is above label */
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: var(--input-border);
+    transition: 0.3s;
+    transform: translateY(-50%);
+    cursor: text;  /* Cursor text mode */
+    z-index: 2;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+    top: 0;
+    font-size: 12px;
+    color: var(--button-bg);
+}
+#centerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+/* Login Container */
+.login-container {
+
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background: var(--input-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+
+.sm-logo {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--button-bg);
+}
+
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: var(--button-text);
+    color: var(--button-bg);
+}
+
+/* Options (Forgot Password + Register) */
+.options {
+    margin-top: 15px;
+}
+
+.options a {
+    display: block;
+    text-decoration: none;
+    color: var(--button-bg);
+    font-size: 14px;
+    margin: 5px 0;
+}
+/* Next Button */
+.next-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.next-btn:hover {
+    background: var(--button-text);
+    color: var(--button-bg);
+}
+
+
+
+
+
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 5px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+.site-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--highlight);
+}
+.coming {
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    color: var(--text-color);
+}
+/* Header Styling */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: linear-gradient(to right, #3f6269, #5aced6, #2850c0); /* Dark cool gradient */
+padding: 15px 30px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Nav */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    background-color: var(--header-bg);
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+.main-nav li {
+    padding: 5px 10px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+.main-nav a:hover {
+    background-color: var(--nav-hover);
+    color: var(--highlight);
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+.hamburger {
+    font-size: 28px;
+    cursor: pointer;
+    display: block;
+    color: var(--highlight-icon-menu);
+}
+@media (max-width: 768px) {
+    .main-nav {
+    display: none;
+    }
+    .hamburger {
+    display: block;
+    }
+}
+  /* Stylish Nav Background (works in dark & light) */
+.main-nav ul {
+background: linear-gradient(to right, var(--sidebar-bg), var(--header-bg));
+border: 2px solid var(--border-color);
+}
+/* Sidebar */
+.side-menu {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background-color: var(--sidebar-bg);
+    padding: 25px 20px;
+    transition: right 0.4s ease;
+    box-shadow: -2px 0 10px var(--shadow);
+    z-index: 2000;
+    border-left: 3px solid var(--highlight);
+}
+.side-menu.active {
+    right: 0;
+}
+.side-menu div {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Theme Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--highlight-slider    );
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Blur Overlay */
+#blurOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1500;
+}
+#blurOverlay.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile */
+
+/* Animated RGB Effect for Site Name */
+.site-name-rgb {
+    background: linear-gradient(270deg, #ff0080, #600db4, #da0707, #21daff, #0331c7, #000000);
+    background-size: 1000% 1000%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Removed text-fill-color (non-standard) */
+    animation: rgbText 5s linear infinite;
+  }
+  
+  
+
+@keyframes rgbText {
+0% { background-position: 0% 10%; }
+20% { background-position: 10% 30%; }
+40% { background-position: 40% 50%; }
+60% { background-position: 60% 70%; }
+80% { background-position: 70% 80%; }
+100% { background-position: 80% 100%; }
+}
+
+/* Coming Soon */
+.coming {
+font-size: 0.85rem;
+font-weight: 500;
+color: var(--text-color);
+opacity: 0.8;
+margin-left: 8px;
+}
+
+/* Stylish Nav Background (works in dark & light) */
+.main-nav ul {
+background: linear-gradient(to right, var(--sidebar-bg), var(--header-bg));
+border: 2px solid var(--border-color);
+}
+.side-menu-opt a {
+color: var(--text-color);
+text-decoration: none;
+font-size: 18px;
+display: flex;
+align-items: center;
+}
+
+.side-menu-opt:hover {
+
+transform: translateX(5px);
+border-left: 4px solid #00ffff; /* Highlight line */
+}
